@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Еда с Душой</title>
+    <style>
+        /* Простые стили */
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #a1750e;
+        }
+
+        /* Шапка сайта */
+        .header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url(bgmain.jpg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Место для логотипа */
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        /* Меню */
+        .menu {
+            background-color: #daad86;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Заголовок */
+        h1 {
+            text-align: center;
+            color: #f3eedb;
+        }
+
+        /* Рецепты */
+        .recipes {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .recipe-card {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ffd700;
+        }
+
+        
+        .recipe-image {
+            width: 300px;
+            height: 200px;
+            background-color: #ddd;
+            margin: 0 auto;
+        }
+
+        /* Подвал */
+        .footer {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url(bgmain.jpg);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <div class="header">
+        <!-- Место для логотипа -->
+        <div class="logo">
+            <img src="лого.png" alt="Логотип сайта" style="width: 100%; height: 100%; filter: brightness(0) invert(1);">
+            
+        </div>
+        <h1>Еда с Душой</h1>
+    </div>
+
+    <!-- Меню -->
+    <div class="menu">
+        <a href="#home">Главная</a>
+        <a href="#recipes">Рецепты</a>
+        <a href="#about">О нас</a>
+    </div>
+
+    
+    <div class="recipes">
+        <h1>Наши Рецепты</h1>
+
+        <!-- Рецепт 1 -->
+        <div class="recipe-card">
+            <div class="recipe-image">
+                
+                <img src="блины.jpg" alt="Блинчики" style="width: 100%; height: 100%;">
+            </div>
+            <h2>Домашние Блинчики</h2>
+            <p>Время приготовления: 35 минут</p>
+            <p>Очень вкусные домашние блинчики, пальчики оближешь</p>
+            <p><a href="https://eda.ru/recepty/zavtraki/klassicheskie-bliny-140749">Рецепт блинов</a></p>
+        </div>
+
+        <!-- Рецепт 2 -->
+        <div class="recipe-card">
+            <div class="recipe-image">
+                
+                <img src="борщ.jpg" alt="Борщ" style="width: 100%; height: 100%;">
+            </div>
+            <h2>Борщ</h2>
+            <p>Время приготовления: 1.5 часа</p>
+            <p>Вкусный домашний борщ по бабушкиному рецепту</p>
+            <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=107392">Рецепт борща</a></p>
+        </div>
+
+        
+        <div class="recipe-card">
+            <div class="recipe-image">
+                
+                <img src="пирожки.jpg" alt="Пирожки" style="width: 100%; height: 100%;">
+            </div>
+            <h2>Пирожки с капустой</h2>
+            <p>Время приготовления: 1.5 часа</p>
+            <p>Мягкие пирожки с капустой</p>
+            <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=159193">Рецепт пирожков</a></p>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <p>Еда с Душой © 2024</p>
+        <p>Телефон: 8-800-555-35-35</p>
+        <p>Email: edasdushoy@gmail.com</p>
+    </div>
+</body>
+</html>
