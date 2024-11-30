@@ -4,53 +4,135 @@
     <meta charset="UTF-8">
     <title>Еда с Душой</title>
     <style>
-        
         body {
             font-family: Arial;
             margin: 0;
             padding: 0;
             background-color: #a1750e;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url(bgmain.jpg);
         }
 
-        
         .header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                             url(bgmain.jpg);
             padding: 20px;
-            text-align: center;
-        }
-
-        
-        .logo {
-            width: 100px;
-            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 1200px;
             margin: 0 auto;
-            margin-bottom: 20px;
         }
 
-        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: rotate(5deg);
+        }
+
+        .site-title {
+            font-family: 'Lobster', cursive;
+            font-size: 2.5em;
+            color: #f3eedb;
+            margin: 0 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
         .menu {
-            background-color: #daad86;
-            padding: 10px;
-            text-align: center;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
-        .menu a {
-            color: black;
+        .menu-item {
+            display: flex;
+            align-items: center;
+            color: #f3eedb;
             text-decoration: none;
-            margin: 0 10px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
-        
+        .menu-item i {
+            margin-right: 8px;
+        }
+
+        .menu-item:hover {
+            color: #ffd700;
+        }
+
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffd700;
+            transition: width 0.3s ease;
+        }
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            filter: brightness(0) invert(1);
+        }
+
+        .menu-item:hover::after {
+            width: 100%;
+        }
+
         h1 {
             text-align: center;
             color: #f3eedb;
         }
+        .search-container {
+            display: flex;
+            justify-content: center; 
+            margin: 20px 0; 
+        }
+        .search-input {
+            padding: 10px; 
+            border: 2px solid #ffd700; 
+            border-radius: 5px; 
+            width: 300px; 
+            font-size: 1em;
+        }
+        .search-button {
+            padding: 10px 15px; 
+            background-color: #ffd700; 
+            border: none; 
+            border-radius: 5px; 
+            color: #000; 
+            cursor: pointer; 
+            margin-left: 10px; 
+            transition: background-color 0.3s ease; 
+        }
 
-        
+        .search-button:hover {
+            background-color: #f3eedb; 
+        }
+
+
         .recipes {
             width: 90%;
             margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .recipe-card {
@@ -58,17 +140,36 @@
             margin: 20px 0;
             padding: 20px;
             border: 2px solid #ffd700;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease-out forwards;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
         }
 
-        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
         .recipe-image {
-            width: 300px;
+            width: 100%;
             height: 200px;
             background-color: #ddd;
             margin: 0 auto;
+            overflow: hidden;
         }
 
-        
+        .recipe-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-image:hover img {
+            transform: scale(1.05);
+        }
+
         .footer {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                             url(bgmain.jpg);
@@ -78,31 +179,53 @@
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .recipes h1 {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <img src="лого.png" alt="Логотип сайта" style="width: 100%; height: 100%; filter: brightness(0) invert(1);">
-            
+            <img src="лого.png" alt="Логотип сайта">
         </div>
-        <h1>Еда с Душой</h1>
+        <h1 class="site-title">Еда с Душой</h1>
+        <nav class="menu">
+            <a href="#home" class="menu-item">
+                <img src="Vector.png" class="menu-icon" alt="Главная">
+                Главная
+            </a>
+            <a href="#recipes" class="menu-item">
+                <img src="Chef Hat.png" class="menu-icon" alt="Рецепты">
+                Рецепты
+            </a>
+            <a href="#about" class="menu-item">
+                <img src="Info.png" class="menu-icon" alt="О нас">
+                О нас
+            </a>
+        </nav>
     </div>
-
-    <div class="menu">
-        <a href="#home">Главная</a>
-        <a href="#recipes">Рецепты</a>
-        <a href="#about">О нас</a>
+    <div class="search-container">  
+        <input type="text" placeholder="Найти рецепт" class="search-input">  
+        <button class="search-button">Поиск</button>  
     </div>
-
-    
     <div class="recipes">
-        <h1>Наши Рецепты</h1>
 
         <div class="recipe-card">
             <div class="recipe-image">
-                
-                <img src="блины.jpg" alt="Блинчики" style="width: 100%; height: 100%;">
+                <img src="блины.jpg" alt="Блинчики">
             </div>
             <h2>Домашние Блинчики</h2>
             <p>Время приготовления: 35 минут</p>
@@ -112,8 +235,7 @@
 
         <div class="recipe-card">
             <div class="recipe-image">
-                
-                <img src="борщ.jpg" alt="Борщ" style="width: 100%; height: 100%;">
+                <img src="борщ.jpg" alt="Борщ">
             </div>
             <h2>Борщ</h2>
             <p>Время приготовления: 1.5 часа</p>
@@ -121,20 +243,48 @@
             <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=107392">Рецепт борща</a></p>
         </div>
 
-        
         <div class="recipe-card">
             <div class="recipe-image">
-                
-                <img src="пирожки.jpg" alt="Пирожки" style="width: 100%; height: 100%;">
+                <img src="пирожки.jpg" alt="Пирожки">
             </div>
             <h2>Пирожки с капустой</h2>
             <p>Время приготовления: 1.5 часа</p>
             <p>Мягкие пирожки с капустой</p>
             <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=159193">Рецепт пирожков</a></p>
         </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="мясо по французски.jpg" alt="Мясо по-французски">
+            </div>
+            <h2>Мясо по-французски</h2>
+            <p>Время приготовления: 1 часа</p>
+            <p>Нежное и сочное мясо по-французски</p>
+            <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=134138">Рецепт мяса по-французски</a></p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="котлета по киевски.webp" alt="котлета по-киевски">
+            </div>
+            <h2>Котлета по-киевски</h2>
+            <p>Время приготовления: 50 минут</p>
+            <p>Сочная котлета по-киевски</p>
+            <p><a href="https://www.russianfood.com/recipes/recipe.php?rid=160617">Рецепт котлеты по-киевски</a></p>
+        </div>
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img src="пицца ветчина.webp" alt="пицца ветчина">
+            </div>
+            <h2>Пицца с ветчиной и грибами</h2>
+            <p>Время приготовления: 40 минут</p>
+            <p>Вкусная пицца с ветчиной и грибами</p>
+            <p><a href="https://www.gastronom.ru/recipe/29694/picca-s-vetchinoj-i-gribami">Рецепт пиццы с ветчиной и грибами</a></p>
+        </div>
+
+
     </div>
 
-    
     <div class="footer">
         <p>Еда с Душой © 2024</p>
         <p>Телефон: 8-800-555-35-35</p>
