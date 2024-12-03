@@ -3,213 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Еда с Душой</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            padding: 0;
-            background-color: #a1750e;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(bgmain.jpg);
-        }
-
-        .header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(bgmain.jpg);
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            filter: brightness(0) invert(1);
-            transition: transform 0.4s ease;
-        }
-
-        .logo img:hover {
-            transform: rotate(10deg);
-        }
-
-        .site-title {
-            font-family: 'Lobster', cursive;
-            font-size: 2.5em;
-            color: #f3eedb;
-            margin: 0 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .menu {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .menu-item {
-            display: flex;
-            align-items: center;
-            color: #f3eedb;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .menu-item i {
-            margin-right: 8px;
-        }
-
-        .menu-item:hover {
-            color: #ffd700;
-        }
-
-        .menu-item::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #ffd700;
-            transition: width 0.3s ease;
-        }
-        .menu-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            filter: brightness(0) invert(1);
-        }
-
-        .menu-item:hover::after {
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #f3eedb;
-        }
-        .search-container {
-            display: flex;
-            justify-content: center; 
-            margin: 20px 0; 
-        }
-        .search-input {
-            padding: 10px; 
-            border: 2px solid #ffd700; 
-            border-radius: 5px; 
-            width: 300px; 
-            font-size: 1em;
-        }
-        .search-button {
-            padding: 10px 15px; 
-            background-color: #ffd700; 
-            border: none; 
-            border-radius: 5px; 
-            color: #000; 
-            cursor: pointer; 
-            margin-left: 10px; 
-            transition: background-color 0.3s ease; 
-        }
-
-        .search-button:hover {
-            background-color: #f9f8f4; 
-        }
-
-
-        .recipes {
-            width: 90%;
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .recipe-card {
-            background-color: white;
-            margin: 20px 0;
-            padding: 20px;
-            border: 4px solid #ffd700;
-            border-radius: 10px; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 0.8s ease-out forwards;
-            flex: 1 1 calc(30% - 20px);
-            box-sizing: border-box;
-        }
-
-        .recipe-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .recipe-image {
-            width: 100%;
-            height: 200px;
-            border-radius: 8px;
-            background-color: #ddd;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .recipe-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .recipe-image:hover img {
-            transform: scale(1.08);
-        }
-
-        .footer {
-            font-family: 'Lobster', cursive;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url(bgmain.jpg);
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="static/styles/styles.css">
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <img src="лого.png" alt="Логотип сайта">
+            <img src="static/images/лого.png" alt="Логотип сайта">
         </div>
         <h1 class="site-title">Еда с Душой</h1>
         <nav class="menu">
             <a href="#home" class="menu-item">
-                <img src="Vector.png" class="menu-icon" alt="Главная">
+                <img src="static/images/Vector.png" class="menu-icon" alt="Главная">
                 Главная
             </a>
             <a href="#recipes" class="menu-item">
-                <img src="Chef recipe.png" class="menu-icon" alt="Рецепты">
+                <img src="static/images/Chef recipe.png" class="menu-icon" alt="Рецепты">
                 Рецепты
             </a>
             <a href="#about" class="menu-item">
-                <img src="Info.png" class="menu-icon" alt="О нас">
+                <img src="static/images/Info.png" class="menu-icon" alt="О нас">
                 О нас
             </a>
         </nav>
@@ -221,18 +33,21 @@
     <div class="recipes">
 
         <div class="recipe-card">
+            <a href="recipe.html?id=bliny">
             <div class="recipe-image">
-                <img src="блины.jpg" alt="Блинчики">
+                <img src="static/images/блины.jpg" alt="Блинчики">
             </div>
             <h2>Домашние Блинчики</h2>
+            </a>
             <p>Время приготовления: 35 минут</p>
             <p>Очень вкусные домашние блинчики, пальчики оближешь</p>
             <p><a href="https://eda.ru/recepty/zavtraki/klassicheskie-bliny-140749">Рецепт блинов</a></p>
+            
         </div>
 
         <div class="recipe-card">
             <div class="recipe-image">
-                <img src="борщ.jpg" alt="Борщ">
+                <img src="static/images/борщ.jpg" alt="Борщ">
             </div>
             <h2>Борщ</h2>
             <p>Время приготовления: 1.5 часа</p>
@@ -242,7 +57,7 @@
 
         <div class="recipe-card">
             <div class="recipe-image">
-                <img src="пирожки.jpg" alt="Пирожки">
+                <img src="static/images/пирожки.jpg" alt="Пирожки">
             </div>
             <h2>Пирожки с капустой</h2>
             <p>Время приготовления: 1.5 часа</p>
@@ -252,7 +67,7 @@
 
         <div class="recipe-card">
             <div class="recipe-image">
-                <img src="мясо по французски.jpg" alt="Мясо по-французски">
+                <img src="static/images/мясо по французски.jpg" alt="Мясо по-французски">
             </div>
             <h2>Мясо по-французски</h2>
             <p>Время приготовления: 1 часа</p>
@@ -262,7 +77,7 @@
 
         <div class="recipe-card">
             <div class="recipe-image">
-                <img src="котлета по киевски.webp" alt="котлета по-киевски">
+                <img src="static/images/котлета по киевски.webp" alt="котлета по-киевски">
             </div>
             <h2>Котлета по-киевски</h2>
             <p>Время приготовления: 50 минут</p>
@@ -271,7 +86,7 @@
         </div>
         <div class="recipe-card">
             <div class="recipe-image">
-                <img src="пицца ветчина.webp" alt="пицца ветчина">
+                <img src="static/images/пицца ветчина.webp" alt="пицца ветчина">
             </div>
             <h2>Пицца с ветчиной и грибами</h2>
             <p>Время приготовления: 40 минут</p>
