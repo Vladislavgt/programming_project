@@ -34,11 +34,11 @@
             width: 100%;
             height: 100%;
             filter: brightness(0) invert(1);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
         .logo img:hover {
-            transform: rotate(5deg);
+            transform: rotate(10deg);
         }
 
         .site-title {
@@ -123,7 +123,7 @@
         }
 
         .search-button:hover {
-            background-color: #f3eedb; 
+            background-color: #f9f8f4; 
         }
 
 
@@ -139,10 +139,11 @@
             background-color: white;
             margin: 20px 0;
             padding: 20px;
-            border: 2px solid #ffd700;
+            border: 4px solid #ffd700;
+            border-radius: 10px; 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             animation: fadeIn 0.8s ease-out forwards;
-            flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(30% - 20px);
             box-sizing: border-box;
         }
 
@@ -183,16 +184,10 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
-        }
-
-        .recipes h1 {
-            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
