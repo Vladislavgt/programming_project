@@ -1,9 +1,10 @@
-const recipes = {
-    "bliny": {
-        title: "Домашние Блинчики",
-        image: "блины.jpg",
-        time: "35 минут",
-        ingredients: [
+[
+    {
+        "id": "bliny",
+        "title": "Домашние Блинчики",
+        "image": "блины.jpg",
+        "time": "35 минут",
+        "ingredients": [
             "Молоко - 500 мл",
             "Яйца - 2 шт",
             "Мука - 200 г",
@@ -11,7 +12,7 @@ const recipes = {
             "Соль - щепотка",
             "Масло - сливочное масло по вкусу"
         ],
-        steps: [
+        "steps": [
             "Взбить 3 яйца и 2 столовых ложки сахара до появления пены.",
             "Добавить 100 грамм муки и 250 мл молока, перемешать.",
             "Добавить оставшиеся 100 грамм муки и 250 мл молока, размешать до однородной массы, разбив максимальное количество комочков.",
@@ -20,11 +21,12 @@ const recipes = {
             "Подавать блины с вареньем, сметаной, сгущенкой по вкусу."
         ]
     },
-    "borsh": {
-        title: "Борщ",
-        image: "борщ.jpg",
-        time: "90 минут",
-        ingredients: [
+    {
+        "id": "borsh",
+        "title": "Борщ",
+        "image": "борщ.jpg",
+        "time": "90 минут",
+        "ingredients": [
             "Говядина - 500 г",
             "Свёкла - 1 шт.",
             "Картофель - 2 шт.",
@@ -41,7 +43,7 @@ const recipes = {
             "Зелень укропа и/или петрушки (для подачи) - 3-4 веточки",
             "Сметана (для подачи) - 2 ст. ложки"
         ],
-        steps: [
+        "steps": [
             "Подготовить продукты.",
             "Говядину нарезать крупными кусками.",
             "Залить мясо в кастрюле холодной водой, довести до кипения, снять пену. Варить бульон примерно 1,5 часа на небольшом огне.",
@@ -57,13 +59,14 @@ const recipes = {
             "Затем добавить пассерованные овощи, лавровый лист и перец. Варить борщ с говядиной еще 5-7 минут.",
             "Готовому борщу дать настояться 10-15 минут. Зелень нарезать.",
             "Разлить борщ по тарелкам, заправить сметаной и посыпать зеленью."
-        ],
+        ]
     },
-    "pirozhki": {
-        title: "Пирожки с капустой",
-        image: "пирожки.jpg",
-        time: "90 минут",
-        ingredients: [
+    {
+        "id": "pirozhki",
+        "title": "Пирожки с капустой",
+        "image": "пирожки.jpg",
+        "time": "90 минут",
+        "ingredients": [
             "Мука - 500 г",
             "Молоко тёплое - 250 мл",
             "Дрожжи сухие - 1,5 ч.л.",
@@ -77,7 +80,7 @@ const recipes = {
             "Соль и перец - по вкусу",
             "Яйцо для смазки - 1 шт"
         ],
-        steps: [
+        "steps": [
             "Смешать тёплое молоко с дрожжами и сахаром, оставить на 10 минут.",
             "Добавить яйца, соль, масло и постепенно всыпать муку, замесить мягкое тесто.",
             "Оставить тесто в тёплом месте на 1 час.",
@@ -91,11 +94,12 @@ const recipes = {
             "Выпекать при 180°C 20-25 минут до золотистого цвета."
         ]
     },
-    "myaso": {
-        title: "Мясо по-французски",
-        image: "мясо по французски.jpg",
-        time: "60 минут",
-        ingredients: [
+    {
+        "id": "myaso",
+        "title": "Мясо по-французски",
+        "image": "мясо по французски.jpg",
+        "time": "60 минут",
+        "ingredients": [
             "Свинина (карбонад) - 600 г",
             "Картофель - 4-5 шт",
             "Лук репчатый - 2 шт",
@@ -105,7 +109,7 @@ const recipes = {
             "Соль, перец - по вкусу",
             "Растительное масло - для смазки"
         ],
-        steps: [
+        "steps": [
             "Мясо нарезать порционными кусками, отбить.",
             "Картофель нарезать кружочками, лук кольцами.",
             "Смазать противень маслом, выложить картофель.",
@@ -115,11 +119,12 @@ const recipes = {
             "Запекать при 180°C 45-50 минут до золотистой корочки."
         ]
     },
-    "kotleta": {
-        title: "Котлета по-киевски",
-        image: "котлета по киевски.webp",
-        time: "50 минут",
-        ingredients: [
+    {
+        "id": "kotleta",
+        "title": "Котлета по-киевски",
+        "image": "котлета по киевски.webp",
+        "time": "50 минут",
+        "ingredients": [
             "Куриное филе - 4 шт",
             "Сливочное масло - 100 г",
             "Зелень (укроп, петрушка) - 30 г",
@@ -129,7 +134,7 @@ const recipes = {
             "Соль, перец - по вкусу",
             "Растительное масло - для жарки"
         ],
-        steps: [
+        "steps": [
             "Размягчённое масло смешать с рубленой зеленью.",
             "Сформировать из масла брусочки, заморозить.",
             "Филе отбить, посолить, поперчить.",
@@ -139,11 +144,12 @@ const recipes = {
             "Довести до готовности в духовке при 180°C 10-12 минут."
         ]
     },
-    "pizza": {
-        title: "Пицца с ветчиной и грибами",
-        image: "пицца ветчина.webp",
-        time: "40 минут",
-        ingredients: [
+    {
+        "id": "pizza",
+        "title": "Пицца с ветчиной и грибами",
+        "image": "пицца ветчина.webp",
+        "time": "40 минут",
+        "ingredients": [
             "Тесто для пиццы - 300 г",
             "Томатный соус - 100 г",
             "Ветчина - 150 г",
@@ -154,7 +160,7 @@ const recipes = {
             "Орегано - по вкусу",
             "Соль, перец - по вкусу"
         ],
-        steps: [
+        "steps": [
             "Раскатать тесто в круг толщиной 0,5 см.",
             "Смазать томатным соусом.",
             "Нарезать ветчину, грибы и лук.",
@@ -165,11 +171,12 @@ const recipes = {
             "Выпекать при 220°C 15-20 минут до золотистой корочки."
         ]
     },
-    "shashlyk": {
-        title: "Шашлык из свинины",
-        image: "шашлык.jpg",
-        time: "4 часа",
-        ingredients: [
+    {
+        "id": "shashlyk",
+        "title": "Шашлык из свинины",
+        "image": "шашлык.jpg",
+        "time": "4 часа",
+        "ingredients": [
             "Свинина (шея) - 1.5 кг",
             "Лук репчатый - 3 шт",
             "Уксус 9% - 2 ст.л.",
@@ -177,7 +184,7 @@ const recipes = {
             "Соль - по вкусу",
             "Специи для шашлыка - по вкусу"
         ],
-        steps: [
+        "steps": [
             "Мясо нарезать крупными кусками.",
             "Лук нарезать кольцами.",
             "Смешать мясо с луком, добавить специи, соль, перец и уксус.",
@@ -186,11 +193,12 @@ const recipes = {
             "Жарить на углях 20-25 минут, периодически переворачивая."
         ]
     },
-    "pelmeni": {
-        title: "Домашние пельмени",
-        image: "пельмени.jpg",
-        time: "120 минут",
-        ingredients: [
+    {
+        "id": "pelmeni",
+        "title": "Домашние пельмени",
+        "image": "пельмени.jpg",
+        "time": "120 минут",
+        "ingredients": [
             "Мука - 600 г",
             "Яйца - 2 шт",
             "Вода - 200 мл",
@@ -199,7 +207,7 @@ const recipes = {
             "Лук репчатый - 2 шт",
             "Перец чёрный - по вкусу"
         ],
-        steps: [
+        "steps": [
             "Замесить тесто из муки, яиц, воды и соли.",
             "Оставить на 30 минут под полотенцем.",
             "Приготовить фарш: смешать мясо с измельчённым луком, посолить, поперчить.",
@@ -208,94 +216,4 @@ const recipes = {
             "Варить в подсоленной воде 7-8 минут после всплытия."
         ]
     }
-
-};
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const recipeId = urlParams.get("id");
-    if (recipeId) {
-        if (!recipes[recipeId]) {
-            document.getElementById("recipe-title").textContent = "Рецепт не найден";
-            return;
-        }
-
-    const recipe = recipes[recipeId];
-
-    document.getElementById("recipe-title").textContent = recipe.title;
-    document.getElementById("recipe-image").src = `static/images/${recipe.image}`;
-    document.getElementById("recipe-image").alt = recipe.title;
-
-    const ingredientsList = document.getElementById("recipe-ingredients");
-    recipe.ingredients.forEach(ingredient => {
-        const li = document.createElement("li");
-        li.textContent = ingredient;
-        ingredientsList.appendChild(li);
-    });
-
-    const stepsList = document.getElementById("recipe-steps");
-    recipe.steps.forEach(step => {
-        const li = document.createElement("li");
-        li.textContent = step;
-        stepsList.appendChild(li);
-    });
-    }
-    else {
-        const searchInput = document.querySelector('.search-input');
-        const searchButton = document.querySelector('.search-button');
-        const recipesContainer = document.querySelector('.recipes');
-        const allRecipeCards = document.querySelectorAll('.recipe-card');
-    
-        function performSearch() {
-            const searchTerm = searchInput.value.toLowerCase();
-            let visibleCount = 0;
-    
-            allRecipeCards.forEach(card => {
-                const title = card.querySelector('h2').textContent.toLowerCase();
-                const description = card.querySelector('p:last-child').textContent.toLowerCase();
-    
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                    card.style.order = visibleCount;
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                    card.style.order = 999;
-                }
-            });
-    
-            if (visibleCount === 0 && searchTerm !== '') {
-                if (!document.querySelector('.no-results')) {
-                    const noResults = document.createElement('div');
-                    noResults.className = 'no-results';
-                    noResults.textContent = 'Рецепты не найдены';
-                    noResults.style.cssText = `
-                        grid-column: 1 / -1;
-                        text-align: center;
-                        color: #f3eedb;
-                        font-size: 1.2em;
-                        padding: 20px;
-                        width: 100%;
-                    `;
-                    recipesContainer.appendChild(noResults);
-                }
-            } else {
-                const noResults = document.querySelector('.no-results');
-                if (noResults) {
-                    noResults.remove();
-                }
-            }
-        }
-    
-        searchButton.addEventListener('click', performSearch);
-    
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-    
-        searchInput.addEventListener('input', performSearch);
-    }
-});
+]
